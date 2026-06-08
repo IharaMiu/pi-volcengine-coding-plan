@@ -1,0 +1,141 @@
+import type { ExtensionAPI } from "@mariozechner/pi-coding-agent";
+
+export default function (pi: ExtensionAPI) {
+  pi.registerProvider("volcengine-plan", {
+    baseUrl: "https://ark.cn-beijing.volces.com/api/coding/v3",
+    apiKey: "$VOLCENGINE_API_KEY",
+    api: "openai-completions",
+    models: [
+      {
+        id: "ark-code-latest",
+        name: "ark-code-latest",
+        reasoning: false,
+        input: ["text", "image"] as ("text" | "image")[],
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+        contextWindow: 256000,
+        maxTokens: 32000,
+        compat: {
+          supportsDeveloperRole: false,
+          maxTokensField: "max_tokens" as const,
+        },
+      },
+      {
+        id: "doubao-seed-code",
+        name: "doubao-seed-code",
+        reasoning: false,
+        input: ["text", "image"] as ("text" | "image")[],
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+        contextWindow: 256000,
+        maxTokens: 32000,
+        compat: {
+          supportsDeveloperRole: false,
+          maxTokensField: "max_tokens" as const,
+        },
+      },
+      {
+        id: "glm-5.1",
+        name: "glm-5.1",
+        reasoning: false,
+        input: ["text"] as ("text" | "image")[],
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+        contextWindow: 200000,
+        maxTokens: 65536,
+        compat: {
+          supportsDeveloperRole: false,
+          maxTokensField: "max_tokens" as const,
+        },
+      },
+      {
+        id: "deepseek-v4-flash",
+        name: "deepseek-v4-flash",
+        reasoning: false,
+        input: ["text"] as ("text" | "image")[],
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+        contextWindow: 1024000,
+        maxTokens: 65536,
+        compat: {
+          supportsDeveloperRole: false,
+          maxTokensField: "max_tokens" as const,
+        },
+      },
+      {
+        id: "deepseek-v4-pro",
+        name: "deepseek-v4-pro",
+        reasoning: false,
+        input: ["text"] as ("text" | "image")[],
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+        contextWindow: 1024000,
+        maxTokens: 65536,
+        compat: {
+          supportsDeveloperRole: false,
+          maxTokensField: "max_tokens" as const,
+        },
+      },
+      {
+        id: "doubao-seed-2.0-code",
+        name: "doubao-seed-2.0-code",
+        reasoning: false,
+        input: ["text", "image"] as ("text" | "image")[],
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+        contextWindow: 256000,
+        maxTokens: 65536,
+        compat: {
+          supportsDeveloperRole: false,
+          maxTokensField: "max_tokens" as const,
+        },
+      },
+      {
+        id: "doubao-seed-2.0-pro",
+        name: "doubao-seed-2.0-pro",
+        reasoning: false,
+        input: ["text", "image"] as ("text" | "image")[],
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+        contextWindow: 256000,
+        maxTokens: 65536,
+        compat: {
+          supportsDeveloperRole: false,
+          maxTokensField: "max_tokens" as const,
+        },
+      },
+      {
+        id: "doubao-seed-2.0-lite",
+        name: "doubao-seed-2.0-lite",
+        reasoning: false,
+        input: ["text", "image"] as ("text" | "image")[],
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+        contextWindow: 256000,
+        maxTokens: 65536,
+        compat: {
+          supportsDeveloperRole: false,
+          maxTokensField: "max_tokens" as const,
+        },
+      },
+      {
+        id: "minimax-latest",
+        name: "minimax-latest",
+        reasoning: false,
+        input: ["text"] as ("text" | "image")[],
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+        contextWindow: 200000,
+        maxTokens: 65536,
+        compat: {
+          supportsDeveloperRole: false,
+          maxTokensField: "max_tokens" as const,
+        },
+      },
+      {
+        id: "kimi-k2.6",
+        name: "kimi-k2.6",
+        reasoning: false,
+        input: ["text", "image"] as ("text" | "image")[],
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+        contextWindow: 256000,
+        maxTokens: 32000,
+        compat: {
+          supportsDeveloperRole: false,
+          maxTokensField: "max_tokens" as const,
+        },
+      },
+    ],
+  });
+}
