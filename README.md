@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/pi-volcengine-coding-plan.svg?style=flat-square)](https://www.npmjs.com/package/pi-volcengine-coding-plan)
 [![MIT License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 
-给 pi 增加 Volcengine Coding Plan 国内版模型支持的扩展包。安装后会注册 `volcengine-plan` provider，并暴露 [volcengine.md](./volcengine.md) 中定义的全部模型。
+给 pi 增加 Volcengine Coding Plan 国内版模型支持的扩展包。安装后会注册 `volcengine-plan` provider。
 
 ## 功能概览
 
