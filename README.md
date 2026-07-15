@@ -96,6 +96,16 @@ pi --list-models
 - 不要改成普通基础模型接口，否则调用路径和计费方式都可能不符合你的 Coding Plan 预期
 - 类似 `glm-5.1`、`deepseek-v4-pro`、`kimi-k2.6` 这类常见模型 id，可能与其他 provider 重名，建议始终使用 `volcengine-plan/模型ID`
 
+## 发布与维护
+
+完整发布流程见 [PUBLISHING.md](./PUBLISHING.md)。
+
+你至少需要完成这几件事：
+
+1. 把 `package.json` 里的 `author` 和 `repository` 改成你自己的信息
+2. 在 GitHub 仓库里配置 `NPM_TOKEN`
+3. 首次发布前执行一次 `npm publish --dry-run`
+
 ## License
 
 MIT
